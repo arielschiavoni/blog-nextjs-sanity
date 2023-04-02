@@ -1,8 +1,10 @@
+import { LinkIcon } from '@sanity/icons'
 import { defineField, defineType } from 'sanity'
 
 export default defineType({
   name: 'footer',
   title: 'Footer',
+  icon: LinkIcon,
   type: 'document',
   fields: [
     defineField({
@@ -12,12 +14,12 @@ export default defineType({
     }),
     defineField({
       name: 'orderText',
-      title: 'Text für Kontakt Bestellung',
+      title: 'Text für Kontakt für Bestellung',
       type: 'string'
     }),
     defineField({
         name: 'stamps',
-        title: 'Bilder für Qualitätssigel',
+        title: 'Bilder Qualitätssigel',
         type: 'array',
         of: [{ type: 'enhancedImage' }],
     }),
