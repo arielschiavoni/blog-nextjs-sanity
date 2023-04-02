@@ -1,6 +1,5 @@
 import { BookIcon } from '@sanity/icons'
 import { defineField, defineType } from 'sanity'
-import productTeaser from './productTeaser'
 
 export default defineType({
   name: 'homepage',
@@ -55,7 +54,7 @@ export default defineType({
       of: [
         {
           type: 'reference',
-          to: [{ type: productTeaser.name }],
+          to: [{ type: 'productTeaser' }],
         },
      ],
     })
