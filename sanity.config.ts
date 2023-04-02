@@ -15,6 +15,7 @@ import homepageType from 'schemas/homepage'
 import productType from 'schemas/product'
 import productpageType from 'schemas/productpage'
 import postType from 'schemas/post'
+import seoType from 'schemas/seo'
 import settingsType from 'schemas/settings'
 import enhancedImageType from 'schemas/enhancedImage'
 
@@ -28,7 +29,7 @@ export default defineConfig({
   title,
   schema: {
     // If you want more content types, you can add them to this array
-    types: [enhancedImageType, homepageType, productType, productpageType, settingsType],
+    types: [enhancedImageType, homepageType, productType, productpageType, seoType , settingsType],
   },
   plugins: [
     deskTool({

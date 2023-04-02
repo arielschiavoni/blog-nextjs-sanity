@@ -14,12 +14,9 @@ export default defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
-      name: 'description',
-      description:
-        'Used for the <meta> description tag for SEO.',
-      title: 'Description',
-      type: 'text',
-      validation: (rule) => rule.max(155).required(),
+      name: 'seo',
+      title: 'SEO Eigenschaften der Seite',
+      type: 'seo',
     }),
     defineField({
       name: 'welcomeHeadline',

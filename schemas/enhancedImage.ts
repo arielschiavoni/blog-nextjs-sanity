@@ -7,10 +7,9 @@ export default defineType({
   type: 'object',
   fields: [
     defineField({
-      name: 'caption',
-      title: 'Bildunterschrift',
-      type: 'string',
-      validation: (rule) => rule.required(),
+      name: 'alt',
+      title: 'Alt Tag für SEO',
+      type: 'string'
     }),
     defineField({
       name: 'image',
@@ -18,6 +17,11 @@ export default defineType({
       type: 'image',
       options: { hotspot: true },
       validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: 'caption',
+      title: 'Bildunterschrift',
+      type: 'string'
     }),
   ],
 })

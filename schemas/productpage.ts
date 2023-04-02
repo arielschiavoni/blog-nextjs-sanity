@@ -9,10 +9,15 @@ export default defineType({
   type: 'document',
   fields: [
     defineField({
-      name: 'productPageName',
+      name: 'title',
       title: 'Name der Produktseite',
       type: 'string',
       validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: 'seo',
+      title: 'SEO Eigenschaften der Seite',
+      type: 'seo',
     }),
     defineField({
       name: 'product',
