@@ -29,7 +29,7 @@ export default defineType({
     }),
     defineField({
       name: 'price',
-      title: 'Preis ab',
+      title: 'Preis',
       type: 'string',
       validation: (rule) => rule.required(),
     }),
