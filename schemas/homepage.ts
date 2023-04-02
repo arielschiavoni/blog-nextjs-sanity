@@ -1,5 +1,6 @@
 import { BookIcon } from '@sanity/icons'
 import { defineField, defineType } from 'sanity'
+import productTeaser from './productTeaser'
 
 export default defineType({
   name: 'homepage',
@@ -46,6 +47,17 @@ export default defineType({
       type: 'array',
       of: [{ type: 'block' }],
       validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: 'productTeaser',
+      title: 'Produkte',
+      type: 'array',
+      of: [
+        {
+          type: 'reference',
+          to: [{ type: productTeaser.name }],
+        },
+     ],
     })
   ],
 })
