@@ -51,5 +51,12 @@ export default defineType({
       of: [{ type: 'enhancedImage'}],
       validation: (rule) => rule.required(),
     }),
+    defineField({
+      name: 'footer',
+      title: 'Footer',
+      type: 'reference',
+      to: [{ type: 'footer' }],
+      validation: (rule) => rule.required(),
+    }),
   ],
 })

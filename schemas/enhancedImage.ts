@@ -20,7 +20,7 @@ export default defineType({
     }),
     defineField({
       name: 'caption',
-      title: 'Bildunterschrift',
+      title: 'Text zum Bild',
       type: 'string'
     }),
   ],

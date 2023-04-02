@@ -54,6 +54,13 @@ export default defineType({
           to: [{ type: 'product' }],
         },
      ],
-    })
+    }),
+    defineField({
+      name: 'footer',
+      title: 'Footer',
+      type: 'reference',
+      to: [{ type: 'footer' }],
+      validation: (rule) => rule.required(),
+    }),
   ],
 })
