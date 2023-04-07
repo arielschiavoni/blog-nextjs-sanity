@@ -1,8 +1,8 @@
-import Container from 'components/BlogContainer'
-import BlogHeader from 'components/BlogHeader'
-import Layout from 'components/BlogLayout'
+import Container from 'components/Container'
+import Header from 'components/Header'
 import HeroPost from 'components/HeroPost'
 import IndexPageHead from 'components/IndexPageHead'
+import Layout from 'components/Layout'
 import MoreStories from 'components/MoreStories'
 import IntroTemplate from 'intro-template'
 import * as demo from 'lib/demo.data'
@@ -26,7 +26,7 @@ export default function IndexPage(props: IndexPageProps) {
 
       <Layout preview={preview} loading={loading}>
         <Container>
-          <BlogHeader title={title} description={description} level={1} />
+          <Header title={title} description={description} level={1} />
           {heroPost && (
             <HeroPost
               title={heroPost.title}
