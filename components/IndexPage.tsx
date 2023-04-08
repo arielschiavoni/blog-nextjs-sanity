@@ -2,17 +2,17 @@
 import Header from 'components/Header'
 import IndexPageHead from 'components/IndexPageHead'
 import Layout from 'components/Layout'
-import type { Post, Settings } from 'lib/sanity.queries'
+import type { HomePage, Settings } from 'lib/sanity.queries'
 
 export interface IndexPageProps {
   preview?: boolean
   loading?: boolean
-  posts: Post[]
+  homePage: HomePage
   settings: Settings
 }
 
 export default function IndexPage(props: IndexPageProps) {
-  const { preview, loading, settings } = props
+  const { preview, loading, settings, homePage } = props
   const { title, subtitle } = settings
 
   return (
@@ -21,6 +21,10 @@ export default function IndexPage(props: IndexPageProps) {
 
       <Layout preview={preview} loading={loading}>
         <Header title={title} subtitle={subtitle} />
+        <div>
+          <pre>{JSON.stringify(homePage, null, 2)}</pre>
+        </div>
+
         {/* <Container></Container> */}
       </Layout>
     </>

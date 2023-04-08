@@ -12,10 +12,18 @@ const postFields = groq`
 
 export const settingsQuery = groq`*[_type == "settings"][0]`
 
-export const indexQuery = groq`
-*[_type == "post"] | order(date desc, _updatedAt desc) {
-  ${postFields}
-}`
+export const homePageQuery = groq`
+*[_type == "homepage"][0] {
+  title,
+  welcomeText,
+  welcomeHeadline,
+  seo,
+  quote,
+  image{asset->{url, mimeType, metadata{dimensions}}},        
+  productTeaser[]->,
+  footer->
+}
+`
 
 export const postAndMoreStoriesQuery = groq`
 {
@@ -53,6 +61,19 @@ export interface Post {
   author?: Author
   slug?: string
   content?: any
+}
+
+// TODO: ist it possible to autogenerate types from groq queries? how about graphql?
+export interface HomePage {
+  _id: string
+  title: string
+  welcomeText: string
+  welcomeHeadline: string
+  seo: string
+  quote: string
+  image: any
+  productTeaser: any
+  footer: any
 }
 
 export interface Settings {
