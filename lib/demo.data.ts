@@ -1,57 +1,22 @@
 // All the demo data that used as fallbacks when there's nothing in the dataset yet
 
-export const title = 'Blog.'
+export const title = 'Atelier Goldschnüss'
 
 export const description = [
   {
-    _key: '9f1a629887fd',
+    _key: 'e694105db4a9e769f7f9b3da51a0c529',
     _type: 'block',
     children: [
       {
-        _key: '4a58edd077880',
+        _key: 'e790a634f256',
         _type: 'span',
         marks: [],
-        text: 'A statically generated blog example using ',
-      },
-      {
-        _key: '4a58edd077881',
-        _type: 'span',
-        marks: ['ec5b66c9b1e0'],
-        text: 'Next.js',
-      },
-      {
-        _key: '4a58edd077882',
-        _type: 'span',
-        marks: [],
-        text: ' and ',
-      },
-      {
-        _key: '4a58edd077883',
-        _type: 'span',
-        marks: ['1f8991913ea8'],
-        text: 'Sanity',
-      },
-      {
-        _key: '4a58edd077884',
-        _type: 'span',
-        marks: [],
-        text: '.',
+        text: 'Accessoires für Hunde und ihre Besitzer.',
       },
     ],
-    markDefs: [
-      {
-        _key: 'ec5b66c9b1e0',
-        _type: 'link',
-        href: 'https://nextjs.org/',
-      },
-      {
-        _key: '1f8991913ea8',
-        _type: 'link',
-        href: 'https://sanity.io/',
-      },
-    ],
+    markDefs: [],
     style: 'normal',
   },
 ]
 
-export const ogImageTitle = 'A Next.js Blog with a Native Authoring Experience'
+export const ogImageTitle = 'Accessoires für Hunde und ihre Besitzer.'
