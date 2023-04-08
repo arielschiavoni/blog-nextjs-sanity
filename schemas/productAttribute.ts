@@ -1,4 +1,3 @@
-
 import { defineField, defineType } from 'sanity'
 
 export default defineType({
@@ -20,7 +19,7 @@ export default defineType({
         {
           type: 'enhancedImage',
         },
-     ],
+      ],
     }),
     defineField({
       name: 'color',
@@ -30,7 +29,7 @@ export default defineType({
         {
           type: 'enhancedColor',
         },
-     ],
+      ],
     }),
   ],
 })

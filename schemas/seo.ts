@@ -1,4 +1,3 @@
-
 import { defineField, defineType } from 'sanity'
 
 export default defineType({
@@ -8,8 +7,7 @@ export default defineType({
   fields: [
     defineField({
       name: 'description',
-      description:
-        'Used for the <meta> description tag for SEO.',
+      description: 'Used for the <meta> description tag for SEO.',
       title: 'Description',
       type: 'text',
       validation: (rule) => rule.max(155).required(),

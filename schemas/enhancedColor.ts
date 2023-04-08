@@ -1,4 +1,3 @@
-
 import { defineField, defineType } from 'sanity'
 
 export default defineType({
@@ -9,12 +8,12 @@ export default defineType({
     defineField({
       name: 'code',
       title: 'Farbcode',
-      type: 'color'
+      type: 'color',
     }),
     defineField({
       name: 'caption',
       title: 'Name der Farbe',
-      type: 'string'
+      type: 'string',
     }),
   ],
 })

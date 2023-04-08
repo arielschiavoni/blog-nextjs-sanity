@@ -1,4 +1,3 @@
-
 import { defineField, defineType } from 'sanity'
 
 export default defineType({
@@ -9,7 +8,7 @@ export default defineType({
     defineField({
       name: 'alt',
       title: 'Alt Tag für SEO',
-      type: 'string'
+      type: 'string',
     }),
     defineField({
       name: 'image',
@@ -21,7 +20,7 @@ export default defineType({
     defineField({
       name: 'caption',
       title: 'Text zum Bild',
-      type: 'string'
+      type: 'string',
     }),
   ],
 })

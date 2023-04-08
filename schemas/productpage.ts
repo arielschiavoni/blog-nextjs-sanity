@@ -34,7 +34,8 @@ export default defineType({
     }),
     defineField({
       name: 'productIntroductionHeadline',
-      title: 'Überschrift für Einführung in das Produkt (z.b. wie wird es hergestellt)',
+      title:
+        'Überschrift für Einführung in das Produkt (z.b. wie wird es hergestellt)',
       type: 'string',
       validation: (rule) => rule.required(),
     }),
@@ -48,7 +49,7 @@ export default defineType({
       name: 'productInspirationImage',
       title: 'Produkt-Inspirationen (Bilder)',
       type: 'array',
-      of: [{ type: 'enhancedImage'}],
+      of: [{ type: 'enhancedImage' }],
       validation: (rule) => rule.required(),
     }),
     defineField({

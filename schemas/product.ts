@@ -39,9 +39,9 @@ export default defineType({
       type: 'array',
       of: [
         {
-           type: 'productAttribute',
+          type: 'productAttribute',
         },
-     ],
+      ],
     }),
   ],
 })

@@ -53,7 +53,7 @@ export default defineType({
           type: 'reference',
           to: [{ type: 'product' }],
         },
-     ],
+      ],
     }),
     defineField({
       name: 'footer',
