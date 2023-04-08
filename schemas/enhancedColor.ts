@@ -3,7 +3,7 @@ import { defineField, defineType } from 'sanity'
 export default defineType({
   name: 'enhancedColor',
   title: 'Farben',
-  type: 'object',
+  type: 'document',
   fields: [
     defineField({
       name: 'code',

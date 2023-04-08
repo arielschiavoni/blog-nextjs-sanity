@@ -27,7 +27,8 @@ export default defineType({
       type: 'array',
       of: [
         {
-          type: 'enhancedColor',
+          type: 'reference',
+          to: [{ type: 'enhancedColor' }],
         },
       ],
     }),
