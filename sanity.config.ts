@@ -10,15 +10,19 @@ import { settingsPlugin, settingsStructure } from 'plugins/settings'
 import { defineConfig } from 'sanity'
 import { deskTool } from 'sanity/desk'
 import { unsplashImageAsset } from 'sanity-plugin-asset-source-unsplash'
+import { colorInput } from "@sanity/color-input";
 import authorType from 'schemas/author'
 import footerType from 'schemas/footer'
 import homepageType from 'schemas/homepage'
 import productType from 'schemas/product'
-import productpageType from 'schemas/productpage'
+import productPageType from 'schemas/productPage'
 import postType from 'schemas/post'
 import seoType from 'schemas/seo'
 import settingsType from 'schemas/settings'
 import enhancedImageType from 'schemas/enhancedImage'
+import enhancedColorType from 'schemas/enhancedColor'
+import productAttributeType from 'schemas/productAttribute'
+
 
 const title =
   process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE || 'Next.js Blog with Sanity.io'
@@ -30,7 +34,7 @@ export default defineConfig({
   title,
   schema: {
     // If you want more content types, you can add them to this array
-    types: [enhancedImageType, footerType, homepageType, productType, productpageType, seoType , settingsType],
+    types: [enhancedColorType, enhancedImageType, footerType, homepageType, productAttributeType, productType, productPageType, seoType , settingsType],
   },
   plugins: [
     deskTool({
@@ -51,5 +55,6 @@ export default defineConfig({
     // Vision lets you query your content with GROQ in the studio
     // https://www.sanity.io/docs/the-vision-plugin
     visionTool({ defaultApiVersion: apiVersion }),
+    colorInput(), 
   ],
 })

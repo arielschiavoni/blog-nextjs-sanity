@@ -8,20 +8,20 @@ export default defineType({
   type: 'document',
   fields: [
     defineField({
-      name: 'productTitle',
+      name: 'title',
       title: 'Name des Produkts',
       type: 'string',
       validation: (rule) => rule.required(),
     }),
     defineField({
-      name: 'productTeaserImage',
+      name: 'teaserImage',
       title: 'Produkt-Teaser-Bild für Homepage',
       type: 'image',
       options: { hotspot: true },
       validation: (rule) => rule.required(),
     }),
     defineField({
-      name: 'productDescription',
+      name: 'description',
       title: 'Produktbeschreibung',
       type: 'array',
       of: [{ type: 'block' }],
@@ -29,9 +29,19 @@ export default defineType({
     }),
     defineField({
       name: 'price',
-      title: 'Preis',
+      title: 'Preis ',
       type: 'string',
       validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: 'productAttributes',
+      title: 'Produkt Eigenschaften',
+      type: 'array',
+      of: [
+        {
+           type: 'productAttribute',
+        },
+     ],
     }),
   ],
 })
