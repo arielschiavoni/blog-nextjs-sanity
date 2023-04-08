@@ -56,7 +56,8 @@ export interface Post {
 }
 
 export interface Settings {
-  title?: string
+  title: string
+  subtitle: string
   description?: any[]
   ogImage?: {
     title?: string

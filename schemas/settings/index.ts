@@ -15,10 +15,18 @@ export default defineType({
   fields: [
     defineField({
       name: 'title',
-      description: 'This field is the title of your blog.',
+      description: 'This field is the title of your site.',
       title: 'Title',
       type: 'string',
       initialValue: demo.title,
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: 'subtitle',
+      description: 'This field is the subtitle of your site.',
+      title: 'Subtitle',
+      type: 'string',
+      initialValue: demo.subtitle,
       validation: (rule) => rule.required(),
     }),
     defineField({
